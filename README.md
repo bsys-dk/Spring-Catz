@@ -8,5 +8,8 @@ This a will be showing all the basic features of
 - Spring boot 4
 - Test containers
 - Docker image
+- JPA
+- Spring Web
+- Lombok
 - And more
 

@@ -9,6 +9,8 @@ A concept app written in Spring Boot 4 and Java 25
 This a will be showing all the basic features of 
 
 - Spring boot 4
+- .sdkmanrc
+- .editorconfig
 - Github actions
 - Test containers
 - Docker image

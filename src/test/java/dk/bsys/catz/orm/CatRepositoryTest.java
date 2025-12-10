@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest(properties = {
@@ -61,5 +63,23 @@ class CatRepositoryTest {
 
         assertNotNull(foundCat);
         assertEquals("Felix", foundCat.getName());
+    }
+
+    @Test
+    void givenCat_FindAllYoungCats() {
+        Cat youngCat = new Cat();
+        youngCat.setName("Smarty");
+        youngCat.setAge(2);
+        catRepository.save(youngCat);
+
+        Cat oldCat = new Cat();
+        oldCat.setName("Gamler");
+        oldCat.setAge(12);
+        catRepository.save(oldCat);
+
+        List<Cat> youngCats = catRepository.findYoungCats();
+
+        //TODO test
+        assertEquals("Smarty", youngCats.getFirst().getName());
     }
 }

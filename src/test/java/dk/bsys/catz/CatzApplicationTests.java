@@ -1,4 +1,4 @@
-package dk.bsys.concept.catz;
+package dk.bsys.catz;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

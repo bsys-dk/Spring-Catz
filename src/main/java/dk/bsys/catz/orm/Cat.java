@@ -1,4 +1,4 @@
-package dk.bsys.concept.catz.orm;
+package dk.bsys.catz.orm;
 
 
 import jakarta.persistence.Entity;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Catz {
+public class Cat {
     @Id
     @GeneratedValue
     private Long id;

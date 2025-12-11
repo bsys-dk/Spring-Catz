@@ -34,3 +34,13 @@ devops tooling:
 - Github actions
 - Test containers
 - Docker image
+
+
+
+Notes:
+
+To avoid JDK warning:
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended"
+```
+JAVA_TOOL_OPTIONS="-Xshare:off" ./gradlew run
+```
